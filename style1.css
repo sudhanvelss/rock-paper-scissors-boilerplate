@@ -99,3 +99,6 @@ body{
     width: 200px;
     font-size: 15px;
 }
+#the{
+    visibility: hidden;
+}

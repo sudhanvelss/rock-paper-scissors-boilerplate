@@ -72,7 +72,26 @@ function scores(){
     display()
 
 }
+
+var the =  document.getElementById("the")
+var won = document.getElementById("won")
+var div = document.getElementsByClassName('div')
+var play = document.getElementById("wonbutton")
 function display(){
     score.textContent=`${three}-${four}`
-    
+    if (four >= 5 || three >= 5){
+        the.style.visibility='visible'
+        button1.style.visibility='hidden'
+        button2.style.visibility='hidden'
+        button3.style.visibility='hidden'
+    }
+    if (four >= 5){
+        won.textContent = "Computer Won the Game"
+
+    }else{
+        won.textContent = "You Won the Game"
+    }
 }
+play.addEventListener("click",() => {
+    location.reload()
+})
